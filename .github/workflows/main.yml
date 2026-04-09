@@ -15,8 +15,8 @@ jobs:
           python-version: '3.10'
       - run: pip install -r requirements.txt
       - run: pip install pyinstaller
-      - run: pyinstaller --noconfirm --windowed --name "综合执法办公小工具" comprehensive_office_tool.py
+      - run: pyinstaller --noconfirm --onefile --windowed --name office_tool comprehensive_office_tool.py
       - uses: actions/upload-artifact@v4
         with:
           name: windows-exe
-          path: dist/综合执法办公小工具.exe
+          path: dist/office_tool.exe
